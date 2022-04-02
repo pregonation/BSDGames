@@ -41,7 +41,7 @@ jobs:
     - name: configure
       run: ./configure
     - name: temp dictionary
-      run: ln -s /usr/share/dict/words tempt-dictionary
+      run: sudo ln -s /usr/share/dict/words tempt-dictionary
     - name: make
       run: make
     - name: make check
