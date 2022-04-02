@@ -316,7 +316,7 @@ again:
 				FILE *fp;
 
 				ask("save file name? ");
-				(void)getline(buf, sizeof(buf));
+				(void)i_getline(buf, sizeof(buf));
 				if ((fp = fopen(buf, "w")) == NULL) {
 					glog("cannot create save file");
 					goto replay;
