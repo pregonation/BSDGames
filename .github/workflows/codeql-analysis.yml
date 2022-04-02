@@ -35,9 +35,9 @@ jobs:
       uses: github/codeql-action/init@v1
 #
     - name: build
-      run: apt-get update
+      run: sudo apt-get update
     - name: dependencies 
-      run: apt-get install flex-old bison libncurses5-dev libncursesw5-dev 
+      run: sudo apt-get install flex-old bison libncurses5-dev libncursesw5-dev 
     - name: configure  
       run: ./configure
     - name: make
