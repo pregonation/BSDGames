@@ -40,8 +40,10 @@ jobs:
       run: sudo apt-get install flex-old bison libncurses5-dev libncursesw5-dev miscfiles
     - name: configure
       run: ./configure
+    - name: temp dictionary
+      run: ln -s /usr/share/dict/words tempt-dictionary
     - name: make
-      run: make all
+      run: make
     - name: make check
       run: make check
     - name: make distcheck
