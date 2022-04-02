@@ -39,9 +39,9 @@ jobs:
     - name: dependencies
       run: sudo apt-get install flex-old bison libncurses5-dev libncursesw5-dev miscfiles
     - name: configure
-      run: ./configure --bsd_games_cfg_dictionary_src=/usr/share/dict/words
+      run: ./configure
     - name: make
-      run: make all
+      run: make
     - name: make check
       run: make check
     - name: make distcheck
