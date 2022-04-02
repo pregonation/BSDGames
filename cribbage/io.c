@@ -245,7 +245,7 @@ incard(crd)
 
 	retval = FALSE;
 	rnk = sut = EMPTY;
-	if (!(line = getline()))
+	if (!(line = i_getline()))
 		goto gotit;
 	p = p1 = line;
 	while (*p1 != ' ' && *p1 != '\0')
