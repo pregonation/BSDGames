@@ -34,7 +34,10 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
 #
-    - name: Build
+    - name: build
+      run: apt-get update
+    - name: dependencies 
+      run: apt-get install flex-old bison libncurses5-dev libncursesw5-dev 
       run: ./configure
     - name: make
       run: make 
