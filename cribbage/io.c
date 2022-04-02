@@ -346,7 +346,7 @@ number(lo, hi, prompt)
 
 	for (sum = 0;;) {
 		msg(prompt);
-		if (!(p = getline()) || *p == '\0') {
+		if (!(p = i_getline()) || *p == '\0') {
 			msg(quiet ? "Not a number" :
 			    "That doesn't look like a number");
 			continue;
@@ -528,12 +528,12 @@ over:
 }
 
 /*
- * getline:
+ * i_getline:
  *      Reads the next line up to '\n' or EOF.  Multiple spaces are
  *	compressed to one space; a space is inserted before a ','
  */
 char *
-getline()
+i_getline()
 {
 	char *sp;
 	int c, oy, ox;
